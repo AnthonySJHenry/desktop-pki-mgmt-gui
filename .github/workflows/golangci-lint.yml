@@ -1,0 +1,27 @@
+name: golangci-lint
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  golangci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: "go.mod"
+      - name: Install GUI dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-dev xorg-dev
+      - name: Download Dependencies
+        run: go mod download
+      - name: Build
+        run: go build -v ./...
+      - uses: golangci/golangci-lint-action@v6
+        with:
+          version: v1.61.0
+          args: --disable-all --enable=gofumpt,govet,staticcheck,errcheck --timeout=5m
+          skip-cache: false
