@@ -1,5 +1,5 @@
 ## PKI Management Tool
-> A GUI tool to help create and manage a local and remote PKI for development purposes. Built with Fyne GUI framework in Go.
+> A GUI tool to help create and manage local and remote PKI for development purposes. Built with Fyne GUI framework in Go.
 
 ```yaml
 [ Server Certificate ] 
