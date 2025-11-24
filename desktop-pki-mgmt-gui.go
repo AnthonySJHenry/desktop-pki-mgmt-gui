@@ -14,5 +14,6 @@ func main() {
 	myWindow.SetContent(widget.NewLabel("Hello, World!"))
 	myWindow.ShowAndRun()
 
-	fmt.Println("Hello, World!")
+	fmt.Println("Application started")
+
 }
