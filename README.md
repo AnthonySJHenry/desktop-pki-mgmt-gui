@@ -1,4 +1,5 @@
-## Desktop PKI Management Tool
+## PKI Management Tool
+> A GUI tool to help create and manage a local and remote PKI for development purposes. Built with Fyne GUI framework in Go.
 
 ```yaml
 [ Server Certificate ] 
@@ -102,4 +103,3 @@ cat server.crt intermediateCA.crt > server-full.crt
 
 
 <p> So, if presented correctly, the client should trust the root CA, and the root CA is imported once. As long as the intermediate is chained to your server cert in server-full.crt, which should be held on the server with the server key, then the client should be able to build that full chain of trust and, while doing the TLS handshake, successfully validate the server.  </p>
-
