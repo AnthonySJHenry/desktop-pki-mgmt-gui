@@ -15,5 +15,4 @@ func main() {
 	myWindow.ShowAndRun()
 
 	fmt.Println("Application started")
-
 }
